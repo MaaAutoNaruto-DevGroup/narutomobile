@@ -26,7 +26,7 @@
     "action": "DoNothing",
     "green_mask": true,
     "post_delay": 500,
-    "focus": "[color:DeepSkyBlue]检查在主页面[/color]"
+    "focus": "[color:darkgray]检测到主页面[/color]"
   },
   "keep_close_x": {
     "next": [

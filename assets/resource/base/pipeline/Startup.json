@@ -195,7 +195,7 @@
         "action": "StopTask",
         "green_mask": true,
         "post_delay": 500,
-        "focus": "[color:DeepSkyBlue]检查在主页面并终止子任务[/color]"
+        "focus": "[color:tomato]当前任务结束[/color]"
     },
     "close_new_ninjia_page": {
         "recognition": "TemplateMatch",
