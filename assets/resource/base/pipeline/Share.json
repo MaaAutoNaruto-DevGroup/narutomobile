@@ -179,19 +179,6 @@
         ],
         "focus": "[color:DeepSkyBlue]关闭QQ[/color]"
     },
-    "back_main_screen": {
-        "next": [
-            "check_main_screen"
-        ],
-        "interrupt": [
-            "click_x",
-            "weekly_sign",
-            "close_chat",
-            "close_friend_rank",
-            "close_new_ninjia_page"
-        ],
-        "focus": "[color:DeepSkyBlue]退回主界面[/color]"
-    },
     "close_weekly_ninjia_title": {
         "recognition": "TemplateMatch",
         "template": "Share/weekly_ninjia_title.png",
@@ -206,33 +193,6 @@
         ],
         "action": "Click",
         "focus": "[color:darkgray]关闭周榜更新提示[/color]"
-    },
-    "back_main_screen_and_stop": {
-        "next": [
-            "check_main_screen_and_stop"
-        ],
-        "interrupt": [
-            "confirm_quit_team",
-            "click_x",
-            "weekly_sign",
-            "close_chat",
-            "close_friend_rank",
-            "close_new_ninjia_page"
-        ],
-        "focus": "[color:DeepSkyBlue]退回主界面并停止子任务[/color]"
-    },
-    "confirm_quit_team": {
-        "recognition": "TemplateMatch",
-        "template": "Share/quit_team.png",
-        "roi": [
-            597,
-            429,
-            46,
-            47
-        ],
-        "action": "Swipe",
-        "duration": 50,
-        "focus": "[color:DeepSkyBlue]小队突袭确认退队[/color]"
     },
     "close_chat": {
         "recognition": "TemplateMatch",

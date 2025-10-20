@@ -1,18 +1,17 @@
 {
-  "close_announcement": {
-    "recognition": "TemplateMatch",
-    "template": [
-      "Startgame/green_masked_x.png",
-      "Startgame/headhunt_end_green_masked.png"
+  "back_main_screen_and_stop": {
+    "next": [
+      "check_main_screen_and_stop"
     ],
-    "action": "Click",
-    "green_mask": true,
-    "threshold": 0.5,
-    "post_wait_freezes": 100,
-    "focus": "[color:DeepSkyBlue]关闭公告[/color]"
+    "interrupt": [
+      "back_main_screen"
+    ],
+    "focus": "[color:DeepSkyBlue]退回主界面并停止当前任务[/color]"
   },
-  "check_main_screen": {
+  "back_main_screen": {
     "recognition": "TemplateMatch",
+    "doc": "反转识别结果",
+    "inverse": true,
     "template": [
       "Startgame/main_green_masked.png"
     ],
@@ -26,18 +25,27 @@
     "action": "DoNothing",
     "green_mask": true,
     "post_delay": 500,
-    "focus": "[color:darkgray]检测到主页面[/color]"
-  },
-  "keep_close_x": {
     "next": [
-      "check_no_x"
+      "check_no_x",
+      "weekly_sign",
+      "close_chat",
+      "close_friend_rank",
+      "close_new_ninjia_page",
+      "close_announcement"
     ],
-    "interrupt": [
-      "click_x",
-      "close_headhunt_end_announcement",
-      "keep_close_x",
-      "close_friend_rank"
-    ]
+    "focus": "[color:darkgray]尝试返回主页面[/color]"
+  },
+  "close_announcement": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "Startgame/green_masked_x.png",
+      "Startgame/headhunt_end_green_masked.png"
+    ],
+    "action": "Click",
+    "green_mask": true,
+    "threshold": 0.5,
+    "post_wait_freezes": 100,
+    "focus": "[color:DeepSkyBlue]关闭公告[/color]"
   },
   "check_no_x": {
     "recognition": "TemplateMatch",
@@ -47,14 +55,12 @@
     "inverse": true,
     "threshold": 0.5,
     "timeout": 2000,
-    "next": [
-      "check_main_screen"
-    ],
     "interrupt": [
-      "click_x"
+      "click_x",
+      "close_headhunt_end_announcement"
     ],
     "post_delay": 700,
-    "focus": "[color:DeepSkyBlue]检查有没有可关闭窗口[/color]"
+    "focus": "[color:darkgray]检查有没有可关闭窗口[/color]"
   },
   "click_x": {
     "recognition": "TemplateMatch",
@@ -64,12 +70,6 @@
     "action": "Click",
     "green_mask": true,
     "threshold": 0.5,
-    "next": [
-      "keep_close_x"
-    ],
-    "interrupt": [
-      "close_headhunt_end_announcement"
-    ],
     "post_delay": 500,
     "focus": "[color:darkgray]点击关闭按钮[/color]"
   },
@@ -100,29 +100,5 @@
     "action": "Swipe",
     "duration": 50,
     "focus": "[color:DeepSkyBlue]关闭好友排名[/color]"
-  },
-  "is_come_back": {
-    "recognition": "ocr",
-    "text": "我回来了",
-    "action": "Click",
-    "roi": [
-      496,
-      560,
-      324,
-      160
-    ],
-    "focus": "[color:DeepSkyBlue]点击我回来了[/color]"
-  },
-  "im_comeback": {
-    "recognition": "ocr",
-    "text": "领取礼物",
-    "action": "Click",
-    "roi": [
-      470,
-      441,
-      351,
-      191
-    ],
-    "focus": "[color:DeepSkyBlue]点击领取礼物[/color]"
   }
 }
