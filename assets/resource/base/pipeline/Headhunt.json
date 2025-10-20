@@ -95,7 +95,7 @@
             174,
             523
         ],
-        "threshold": 0.85,
+        "threshold": 0.84,
         "action": "Click",
         "next": [
             "headhunt_recruit"
