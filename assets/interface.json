@@ -24,14 +24,8 @@
             "entry": "start_up",
             "check": true,
             "option": [
-                "加载时间选择",
                 "账号属性"
             ]
-        },
-        {
-            "name": "开始游戏",
-            "entry": "start_game",
-            "check": true
         },
         {
             "name": "轻松助手",
@@ -143,43 +137,6 @@
         }
     ],
     "option": {
-        "加载时间选择": {
-            "cases": [
-                {
-                    "name": "加载时间20s",
-                    "pipeline_override": {
-                        "click_icon": {
-                            "post_delay": 20000
-                        },
-                        "start_naruto": {
-                            "post_delay": 20000
-                        }
-                    }
-                },
-                {
-                    "name": "加载时间10s",
-                    "pipeline_override": {
-                        "click_icon": {
-                            "post_delay": 10000
-                        },
-                        "start_naruto": {
-                            "post_delay": 10000
-                        }
-                    }
-                },
-                {
-                    "name": "加载时间30s",
-                    "pipeline_override": {
-                        "click_icon": {
-                            "post_delay": 30000
-                        },
-                        "start_naruto": {
-                            "post_delay": 30000
-                        }
-                    }
-                }
-            ]
-        },
         "账号属性": {
             "cases": [
                 {
