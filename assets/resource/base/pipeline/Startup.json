@@ -172,11 +172,13 @@
             "check_main_screen_and_stop"
         ],
         "interrupt": [
-            "close_new_ninjia_page",
+            "close_current_page",
             "close_headhunt_end_announcement",
             "weekly_sign",
             "close_friend_rank",
-            "back_main_screen"
+            "back_main_screen",
+            "im_come_back",
+            "im_come_back_award"
         ],
         "focus": "[color:DeepSkyBlue]点击开始游戏[/color]"
     },
@@ -197,7 +199,7 @@
         "post_delay": 500,
         "focus": "[color:tomato]当前任务结束[/color]"
     },
-    "close_new_ninjia_page": {
+    "close_current_page": {
         "recognition": "TemplateMatch",
         "template": "Startgame/right_up_x.png",
         "roi": [
@@ -208,7 +210,7 @@
         ],
         "action": "Click",
         "post_wait_freezes": 500,
-        "focus": "[color:DeepSkyBlue]关闭忍者上新公告[/color]"
+        "focus": "[color:DeepSkyBlue]关闭当前页面[/color]"
     },
     "weekly_sign": {
         "recognition": "OCR",
@@ -226,5 +228,29 @@
         "action": "Click",
         "post_wait_freezes": 100,
         "focus": "[color:DeepSkyBlue]进行周度签到[/color]"
+    },
+    "im_come_back": {
+        "recognition": "ocr",
+        "text": "我回来了",
+        "action": "Click",
+        "roi": [
+            496,
+            560,
+            324,
+            160
+        ],
+        "focus": "[color:DeepSkyBlue]点击我回来了[/color]"
+    },
+    "im_come_back_award": {
+        "recognition": "ocr",
+        "text": "领取礼物",
+        "action": "Click",
+        "roi": [
+            470,
+            441,
+            351,
+            191
+        ],
+        "focus": "[color:DeepSkyBlue]点击领取礼物[/color]"
     }
 }
