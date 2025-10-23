@@ -30,6 +30,7 @@
       "close_friend_rank",
       "close_current_page",
       "close_announcement",
+      "direct_hit_quit",
       "im_come_back",
       "im_come_back_award"
     ],
@@ -243,5 +244,17 @@
       191
     ],
     "focus": "[color:DeepSkyBlue]点击领取礼物[/color]"
+  },
+  "direct_hit_quit": {
+    "template": "Share/direct_hit_quit.png",
+    "roi": [
+      506,
+      649,
+      66,
+      56
+    ],
+    "action": "Click",
+    "post_wait_freezes": 500,
+    "focus": "[color:DeepSkyBlue]点击任意地方退出[/color]"
   }
 }
