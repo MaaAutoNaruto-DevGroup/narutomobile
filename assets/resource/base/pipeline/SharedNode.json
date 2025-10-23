@@ -19,10 +19,14 @@
       1269,
       720
     ],
+    "inverse": true,
     "threshold": 0.95,
     "action": "DoNothing",
     "green_mask": true,
     "post_delay": 500,
+    "next": [
+      "check_main_screen"
+    ],
     "interrupt": [
       "check_has_x",
       "weekly_sign",
