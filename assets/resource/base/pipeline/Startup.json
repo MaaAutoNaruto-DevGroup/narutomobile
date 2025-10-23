@@ -184,6 +184,6 @@
         "action": "DoNothing",
         "green_mask": true,
         "post_delay": 500,
-        "focus": "[color:tomato]当前任务结束[/color]"
+        "focus": "[color:tomato]检查在主界面[/color]"
     }
 }
