@@ -132,9 +132,6 @@
         "next": [
             "team_dash_auto_fight"
         ],
-        "interrupt": [
-            "team_dash_group_help_undone"
-        ],
         "post_wait_freezes": 500,
         "focus": "[color:DeepSkyBlue]选择组织助战[/color]"
     },
@@ -166,11 +163,10 @@
         "threshold": 0.95,
         "action": "Click",
         "next": [
-            "team_dash_my_help_award"
-        ],
-        "interrupt": [
+            "team_dash_my_help_award",
             "team_dash_my_help_undone"
         ],
+        "interrupt": [],
         "post_wait_freezes": 500,
         "focus": "[color:DeepSkyBlue]我的助战未完成[/color]"
     },
