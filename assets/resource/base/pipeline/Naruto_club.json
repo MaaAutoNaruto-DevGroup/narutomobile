@@ -573,6 +573,7 @@
         "next": [
             "swipe_for_club_submit"
         ],
+        "interrupt": "close_gold_helper",
         "focus": "[color:DeepSkyBlue]关闭金币助手[/color]"
     },
     "swipe_for_club_submit": {
