@@ -47,7 +47,7 @@
       1279,
       334
     ],
-    "order_by": "click",
+    "order_by": "Score",
     "action": "Swipe",
     "post_wait_freezes": 1000,
     "green_mask": true,
