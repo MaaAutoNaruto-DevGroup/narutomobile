@@ -47,9 +47,9 @@
       1279,
       334
     ],
-    "order_by": "Score",
+    "order_by": "click",
     "action": "Swipe",
-    "duration": 1000,
+    "post_wait_freezes": 1000,
     "green_mask": true,
     "focus": "[color:darkgray]关闭当前窗口[/color]"
   },
