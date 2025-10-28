@@ -195,6 +195,7 @@
             99,
             77
         ],
+        "threshold": 0.6,
         "action": "Click",
         "next": [
             "team_dash_invite_page"
@@ -297,8 +298,7 @@
             107,
             107
         ],
-        "action": "Swipe",
-        "duration": 50,
+        "action": "Click",
         "next": [
             "check_in_team_dash_sweep"
         ],
@@ -450,7 +450,9 @@
     "team_dash_remin_0": {
         "recognition": "OCR",
         "expected": [
-            "0"
+            "0",
+            "O",
+            "o"
         ],
         "roi": [
             722,
