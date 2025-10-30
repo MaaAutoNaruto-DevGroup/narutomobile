@@ -96,10 +96,10 @@
     "recognition": "TemplateMatch",
     "template": "SharedNode/check_in_daily_award.png",
     "roi": [
-      580,
-      172,
-      130,
-      47
+      0,
+      106,
+      254,
+      156
     ],
     "action": "Swipe",
     "begin": [

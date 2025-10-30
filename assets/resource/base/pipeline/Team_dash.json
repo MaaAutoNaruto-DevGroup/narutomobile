@@ -346,6 +346,7 @@
             129
         ],
         "post_delay": 5000,
+        "next": "check_not_in_team_dash_sweep",
         "focus": "[color:DeepSkyBlue]正在进行小队突袭战斗[/color]"
     },
     "check_not_in_team_dash_sweep": {
