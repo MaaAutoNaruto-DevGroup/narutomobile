@@ -299,6 +299,7 @@
             "team_dash_do_not_remind_gold",
             "team_dash_auto_fight"
         ],
+        "post_wait_freezes": 500,
         "rate_limit": 3000,
         "post_wait_freezes": 1000,
         "focus": "[color:DeepSkyBlue]小队突袭自动战斗[/color]"
