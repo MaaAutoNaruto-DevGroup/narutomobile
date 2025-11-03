@@ -69,7 +69,8 @@
             "try_share"
         ],
         "interrupt": [
-            "close_weekly_ninjia_title",
+            "share_close_weekly_ninjia_title_next_step",
+            "share_close_weekly_ninjia_title",
             "share_entry",
             "share_to_qq_friend"
         ],
@@ -114,7 +115,8 @@
             "try_share"
         ],
         "interrupt": [
-            "close_weekly_ninjia_title",
+            "share_close_weekly_ninjia_title_next_step",
+            "share_close_weekly_ninjia_title",
             "share_entry",
             "share_to_qq_friend"
         ],
@@ -135,7 +137,8 @@
             "share_to_qq_friend"
         ],
         "interrupt": [
-            "close_weekly_ninjia_title"
+            "share_close_weekly_ninjia_title_next_step",
+            "share_close_weekly_ninjia_title"
         ],
         "pre_wait_freezes": 200,
         "post_delay": 1200,
@@ -159,7 +162,8 @@
             "close_qq_app"
         ],
         "interrupt": [
-            "close_weekly_ninjia_title"
+            "share_close_weekly_ninjia_title_next_step",
+            "share_close_weekly_ninjia_title"
         ],
         "action": "Click",
         "pre_wait_freezes": 200,
@@ -190,7 +194,23 @@
         ],
         "focus": "[color:DeepSkyBlue]关闭QQ[/color]"
     },
-    "close_weekly_ninjia_title": {
+    "share_close_weekly_ninjia_title_next_step": {
+        "recognition": "TemplateMatch",
+        "template": "Share/weekly_ninjia_title_next_step.png",
+        "roi": [
+            807,
+            949,
+            294,
+            104
+        ],
+        "next": [
+            "share_close_weekly_ninjia_title"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 400,
+        "focus": "[color:darkgray]关闭周榜更新下一步提示[/color]"
+    },
+    "share_close_weekly_ninjia_title": {
         "recognition": "TemplateMatch",
         "template": "Share/weekly_ninjia_title.png",
         "roi": [
@@ -203,6 +223,7 @@
             "try_share"
         ],
         "action": "Click",
+        "post_wait_freezes": 400,
         "focus": "[color:darkgray]关闭周榜更新提示[/color]"
     }
 }
