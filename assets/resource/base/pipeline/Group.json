@@ -13,7 +13,7 @@
         "recognition": "TemplateMatch",
         "template": [
             "Group/group_entry_white.png",
-            "Group/group.png",
+            "Group/group.png"
         ],
         "threshold": 0.7,
         "action": "Swipe",
@@ -198,7 +198,7 @@
         "next": "group_award",
         "pre_wait_freezes": 300,
         "post_wait_freezes": 500,
-        "focus": "[color:DeepSkyBlue]确认铜币签到[/color]"
+        "focus": "[color:DeepSkyBlue]签到已完成[/color]"
     },
     "group_award": {
         "next": [
@@ -288,8 +288,8 @@
         "threshold": 0.7,
         "action": "Swipe",
         "duration": 50,
-        "next": "second_group_award_box",
-        "interrupt": [
+        "next": [
+            "second_group_award_box",
             "second_group_award_box_done"
         ],
         "post_wait_freezes": 700,
