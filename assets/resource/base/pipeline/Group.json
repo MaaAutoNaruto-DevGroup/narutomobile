@@ -33,7 +33,7 @@
     "no_group": {
         "recognition": "TemplateMatch",
         "template": "Group/group_list.png",
-        "recommended roi": [
+        "roi": [
             94,
             30,
             474,
