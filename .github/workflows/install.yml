@@ -102,11 +102,36 @@ jobs:
           rm -f "${ARCHIVE_FILE_PATH}"
           echo "Archive cleanup command executed for MFAAvalonia."
 
+      - name: Setup Embed Python on Windows
+        if: matrix.os == 'win'
+        shell: bash
+        run: |
+          python tools/ci/setup_embed_python.py
+          
+      - name: Setup Embed Python on macOS
+        if: matrix.os == 'macos'
+        shell: bash
+        run: |
+          python3 tools/ci/setup_embed_python.py
+          EMBED_PYTHON_PATH="./install/python/bin/python3"
+          if [ -f "$EMBED_PYTHON_PATH" ]; then
+            echo "Setting execute permission for $EMBED_PYTHON_PATH"
+            chmod +x "$EMBED_PYTHON_PATH"
+          else
+            echo "Warning: Embedded Python executable not found at $EMBED_PYTHON_PATH. Skipping chmod."
+          fi
+
+      - name: Download Python dependencies
+        shell: bash
+        run: |
+          ./install/python/python.exe tools/ci/download_deps.py --deps-dir install/deps
+
+
       - name: Install
         shell: bash
         run: |
           python -m pip install -r ./requirements.txt
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./tools/ci/install.py ${{ needs.meta.outputs.tag }}
 
           if [[ "${{ matrix.os }}" != "android" ]]; then
             if [ -d "MFA" ]; then
